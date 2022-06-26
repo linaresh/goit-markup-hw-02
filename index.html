@@ -1,143 +1,318 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="">
-  <title>WebStudio</title>
-</head>
-<body>
-
-  <header class="head">
-    <div class="container">
-      <nav>
-        <a href="#" class="logo"><span>Web</span>Studio</a>
-        <ul class="menu_list">
-          <li class="menu_item"> 
-            <a href="#" class="menu_link">Студия</a></li>
-          <li class="menu_item">
-            <a href="#" class="menu_link">Портфолио</a></li>
-          <li class="menu_item">
-            <a href="#" class="menu_link">Контакты</a></li>
-        </ul>
-        <ul class="contact">
-          <li class="contact_mail"><a href="mailto:info@devstudio.com" class="contact_link">info@devstudio.com</a></li> 
-          <li class="contact_phone"><a href="tel:+380961111111" class="contact_link">+38 096 111 11 11</a>
-          </li>  
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="hero">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>WebStudio</title>
+  </head>
+  <body>
+    <header class="header">
       <div class="container">
-        <h1 class="offer_title">Эффективные решения для вашего бизнеса</h1>
-        <button class="offer_button" type="button">
-          Заказать услугу
-        </button>
+        <nav class="navigation">
+          <a href="#" class="logo"><span>Web</span>Studio</a>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link menu__active">Студия</a>
+            </li>
+            <li class="menu_item">
+              <a href="./portfolio.html" class="menu__link">Портфолио</a>
+            </li>
+            <li class="menu_item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="contact">
+            <li class="contact__mail">
+              <a href="mailto:info@devstudio.com" class="contact__link">
+                <svg class="contact__icon contact__icon--mail">
+                  <use xlink:href="./images/sprite.svg#mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contact__phone">
+              <a href="tel:+380961111111" class="contact__link">
+                <svg class="contact__icon contact__icon--phone">
+                  <use xlink:href="./images/sprite.svg#phone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section class="advantages">
-      <div class="container">
-        <h2 class="title">Наши преимущества</h2>
-        <ul class="advantages-list">
-          <li class="advantage">
-            <h3 class="advantage_title">Внимание к деталям</h3>
-            <p class="advantage_text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
-          </li>
-          <li class="advantage">
-            <h3 class="advantage_title">Пунктуальность</h3>
-            <p class="advantage_text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
-          </li>
-          <li class="advantage">
-            <h3 class="advantage_title">Планирование</h3>
-            <p class="advantage_text">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
-          </li>
-          <li class="advantage">
-            <h3 class="advantage_title">Современные технологии</h3>
-            <p class="advantage_text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <main>
+      <section class="hero">
+        <div class="overlay">
+          <div class="container">
+            <div class="offer">
+              <h1 class="offer__title">
+                Эффективные решения для вашего бизнеса
+              </h1>
+              <button class="button" type="button">Заказать услугу</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section class="works"> 
-      <div class="container">
-        <h2 class="title">Чем мы занимаемся</h2>
-        <ul class="works_list">
-          <li class="work">
-            <a href="#" class="work_link">
-              <img src="images/work1.jpg" alt="Десктопные приложения" class="work_img" width="370">
-            </a>
-          </li>
-          <li class="work">
-            <a href="#" class="work_link">
-              <img src="images/work2.jpg" alt="Мобильные приложения" class="work_img" width="370">
-            </a>
-          </li>
-          <li class="work">
-            <a href="#" class="work_link">
-              <img src="images/work3.jpg" alt="Дизайнерские решения" class="work_img" width="370">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <section class="our-advantages">
+        <div class="container">
+          <h2 class="title visualy-hidden">Наши преимущества</h2>
+          <ul class="advantages">
+            <li class="advantage advantage--attention">
+              <h3 class="advantage__title">Внимание к деталям</h3>
+              <p class="advantage__text">
+                Идейные соображения, а также начало повседневной работы по
+                формированию позиции.
+              </p>
+            </li>
+            <li class="advantage advantage--time">
+              <h3 class="advantage__title">Пунктуальность</h3>
+              <p class="advantage__text">
+                Задача организации, в особенности же рамки и место обучения
+                кадров влечет за собой.
+              </p>
+            </li>
+            <li class="advantage advantage--plane">
+              <h3 class="advantage__title">Планирование</h3>
+              <p class="advantage__text">
+                Равным образом консультация с широким активом в значительной
+                степени обуславливает.
+              </p>
+            </li>
+            <li class="advantage advantage--technolog">
+              <h3 class="advantage__title">Современные технологии</h3>
+              <p class="advantage__text">
+                Значимость этих проблем настолько очевидна, что реализация
+                плановых заданий.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="team">
-      <div class="container">
-        <h2 class="team">Наша команда</h2>
-        <ul class="employees">
-          <li class="employee">           
-            <img src="images/employee1.jpg" alt="Игорь Демьяненко" class="employee_img" width="270">               
-            <h3 class="employee_title">Игорь Демьяненко</h3>
-            <p class="employe_speciality">Product Designer</p>
-          </li>
-          <li class="employee">            
-            <img src="images/employee2.jpg" alt="Ольга Репина" class="employee_img" width="270">
-            <h3 class="employee_title">Ольга Репина</h3>
-            <p class="employe_speciality">Frontend Developer</p>
-          </li>
-          <li class="employee">           
-            <img src="images/employee3.jpg" alt="Николай Тарасов" class="employee_img" width="270">                
-            <h3 class="employee_title">Николай Тарасов</h3>
-            <p class="employe_speciality">Marketing</p>
-          </li>
-          <li class="employee">           
-            <img src="images/employee4.jpg" alt="Михаил Ермаков" class="employee_img" width="270">                
-            <h3 class="employee_title">Михаил Ермаков</h3>
-            <p class="employe_speciality">UI Designer</p>                
-          </li>          
-        </ul>
-      </div>
-    </section> 
+      <section class="works">
+        <div class="container">
+          <h2 class="title">Чем мы занимаемся</h2>
+          <ul class="works">
+            <li class="work">
+              <a href="#" class="work__link">
+                <img
+                  src="images/work1.jpg"
+                  alt="Десктопные приложения"
+                  class="work_img"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="work__title">Десктопные приложения</h3>
+              </a>
+            </li>
+            <li class="work">
+              <a href="#" class="work__link">
+                <img
+                  src="images/work2.jpg"
+                  alt="Мобильные приложения"
+                  class="work_img"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="work__title">Мобильные приложения</h3>
+              </a>
+            </li>
+            <li class="work">
+              <a href="#" class="work__link">
+                <img
+                  src="images/work3.jpg"
+                  alt="Дизайнерские решения"
+                  class="work_img"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="work__title">Дизайнерские решения</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-  </main> 
+      <section class="team">
+        <div class="container">
+          <h2 class="title">Наша команда</h2>
+          <ul class="employees">
+            <li class="employee">
+              <img
+                src="images/employee1.jpg"
+                alt="Игорь Демьяненко"
+                class="employee__img"
+                width="270"
+              />
+              <h3 class="employee__title">Игорь Демьяненко</h3>
+              <p class="employe_speciality">Product Designer</p>
+              <div class="sociale">
+                <a href="#" class="fa-brands fa-instagram sociale__link"> </a>
+                <a href="#" class="fa-brands fa-twitter sociale__link"> </a>
+                <a href="#" class="fa-brands fa-facebook-f sociale__link"> </a>
+                <a href="#" class="fa-brands fa-linkedin-in sociale__link"> </a>
+              </div>
+            </li>
+            <li class="employee">
+              <img
+                src="images/employee2.jpg"
+                alt="Ольга Репина"
+                class="employee__img"
+                width="270"
+              />
+              <h3 class="employee__title">Ольга Репина</h3>
+              <p class="employe__speciality">Frontend Developer</p>
+              <div class="sociale">
+                <a href="#" class="fa-brands fa-instagram sociale__link"> </a>
+                <a href="#" class="fa-brands fa-twitter sociale__link"> </a>
+                <a href="#" class="fa-brands fa-facebook-f sociale__link"> </a>
+                <a href="#" class="fa-brands fa-linkedin-in sociale__link"> </a>
+              </div>
+            </li>
+            <li class="employee">
+              <img
+                src="images/employee3.jpg"
+                alt="Николай Тарасов"
+                class="employee_img"
+                width="270"
+              />
+              <h3 class="employee__title">Николай Тарасов</h3>
+              <p class="employe__speciality">Marketing</p>
+              <div class="sociale">
+                <a href="#" class="fa-brands fa-instagram sociale__link"> </a>
+                <a href="#" class="fa-brands fa-twitter sociale__link"> </a>
+                <a href="#" class="fa-brands fa-facebook-f sociale__link"> </a>
+                <a href="#" class="fa-brands fa-linkedin-in sociale__link"> </a>
+              </div>
+            </li>
+            <li class="employee">
+              <img
+                src="images/employee4.jpg"
+                alt="Михаил Ермаков"
+                class="employee_img"
+                width="270"
+              />
+              <h3 class="employee__title">Михаил Ермаков</h3>
+              <p class="employe__speciality">UI Designer</p>
+              <div class="sociale">
+                <a href="#" class="fa-brands fa-instagram sociale__link"> </a>
+                <a href="#" class="fa-brands fa-twitter sociale__link"> </a>
+                <a href="#" class="fa-brands fa-facebook-f sociale__link"> </a>
+                <a href="#" class="fa-brands fa-linkedin-in sociale__link"> </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="container">
+          <h2 class="title">Постоянные клиенты</h2>
+          <ul class="partner">
+            <li class="partner__item">
+              <a href="#" class="partner__link">
+                <svg class="partner__icon">
+                  <use xlink:href="./images/sprite.svg#company1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="partner_item">
+              <a href="#" class="partner__link">
+                <svg class="partner__icon">
+                  <use xlink:href="./images/sprite.svg#company2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="partner__item">
+              <a href="#" class="partner__link">
+                <svg class="partner__icon">
+                  <use xlink:href="./images/sprite.svg#company3"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="partner__item">
+              <a href="#" class="partner__link">
+                <svg class="partner__icon">
+                  <use xlink:href="./images/sprite.svg#company4"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="partner__item">
+              <a href="#" class="partner__link">
+                <svg class="partner__icon">
+                  <use xlink:href="./images/sprite.svg#company5"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="partner__item">
+              <a href="#" class="partner__link">
+                <svg class="partner__icon">
+                  <use xlink:href="./images/sprite.svg#company6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="container">
-        <a href="#" class="footer_logo">
-          <span>Web</span>Studio
-        </a>
-        <address>
-          <ul class="address" >
-            <li class="address_street">
-              г. Киев, пр-т Леси Украинки, 26
-            </li>
-            <li class="address_mail">
-              <a href="mailTo:info@example.com" class="address_link">info@example.com</a>
-            </li>
-            <li class="address_phone">
-              <a href="tel:+3809911111" class="address_link">+38 099 111 11 1111</a>
-            </li>
-          </ul>          
-        </address>
+        <div class="footer_wrap">
+          <div class="contacts">
+            <a href="#" class="logo logo--footer"> <span>Web</span>Studio </a>
+            <address>
+              <ul class="address">
+                <li class="address__street">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="address__mail">
+                  <a href="mailTo:info@example.com" class="address__link"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="address__phone">
+                  <a href="tel:+3809911111" class="address__link"
+                    >+38 099 111 11 1111</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="call">
+            <p class="footer__title">присоединяйтесь</p>
+            <div class="sociale sociale--footer">
+              <a href="#" class="fa-brands fa-instagram sociale__link"> </a>
+              <a href="#" class="fa-brands fa-twitter sociale__link"> </a>
+              <a href="#" class="fa-brands fa-facebook-f sociale__link"> </a>
+              <a href="#" class="fa-brands fa-linkedin-in sociale__link"> </a>
+            </div>
+          </div>
+
+          <form action="#" class="form">
+            <p class="footer__title">Подпишитесь на рассылку</p>
+            <input type="text" placeholder="E-mail" class="form__input" />
+            <button class="button form__button">
+              Подписаться <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
       </div>
-    </footer>   
-  
-</body>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/7cd1aa9acb.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
